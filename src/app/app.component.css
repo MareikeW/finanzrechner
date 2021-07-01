@@ -1,16 +1,11 @@
 header {
     width: 90%;
-    background-color: lightcoral;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     height: 60px;
     align-items: center;
     position: relative;
-}
-
-.header__title {
-
 }
 
 .hamburger-menu {
@@ -20,7 +15,7 @@ header {
 
 .hamburger-menu:hover,
 .hamburger-menu:focus {
-    color: white;
+    color: blue;
 }
 
 .navbar {
@@ -49,4 +44,39 @@ header {
     color: white;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
+}
+
+@media (min-width: 765px) {
+    header {
+        position: unset;
+    }
+    .hamburger-menu {
+        display: none;
+    }
+
+    .navbar {
+        width: auto;
+        position: unset;
+        transition: unset;
+        overflow: unset;
+        display: flex;
+        flex-direction: row;
+        margin-top: 0px;
+        justify-content: flex-end;
+        align-items: center;
+        color: black;
+    }
+
+    .nav__link {
+        text-align: center;
+        text-transform: uppercase;
+        padding: 1em 1.5em;
+        color: black;
+    }
+
+    .nav__link:hover,
+    .nav__link:focus {
+        color: blue;
+        border: none;
+    }
 }
