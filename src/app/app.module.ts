@@ -3,10 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SparenComponent } from './sparen/sparen.component';
+import { EinmaligComponent } from './einmalig/einmalig.component';
+import { BudgetComponent } from './budget/budget.component';
+import { StartseiteComponent } from './startseite/startseite.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SparenComponent,
+    EinmaligComponent,
+    BudgetComponent,
+    StartseiteComponent
   ],
   imports: [
     BrowserModule,
