@@ -1,1 +1,44 @@
-<p>sparen works!</p>
+<main>
+    <h1>Sparrechner</h1>
+    <!--Reactive Form-->
+    <div class="rechner__container">
+        <!-- Form zum Werte eintragen -->
+        <form id="sparrechnerForm" class="zinsen__form" autocomplete="off">
+        <label for="anfangskapital">Anfangskapital:</label>
+        <input type="number" id="anfangskapital" [formControl]="anfangskapital">
+
+        <label for="sparrate">Sparrate:</label>
+        <input type="number" id="sparrate" [formControl]="sparrate">
+
+        <label for="sparintervall">Sparintervall:</label>
+        <!--monatlich-->
+        <select id="sparintervall" [formControl]="sparintervall">
+            <option value="monatlich">monatlich</option>
+            <option value="jährlich">jährlich</option>
+        </select>
+
+        <label for="zinssatz">Zinssatz (% p.a.):</label>
+        <input type="number" id="zinssatz" [formControl]="zinssatz">
+
+        <label for="ansparzeit">Ansparzeit (Jahre):</label>
+        <input type="number" id="ansparzeit" [formControl]="ansparzeit">
+
+        <button 
+            id="sparrechner-button" 
+            type="button" 
+            class="calc__button" 
+            (click)="berechneErgebnis()"
+        >Berechnen</button>
+        </form>
+
+        <div id="endkapital" class="ergebnis">Ergebnis</div>
+
+    </div>
+
+    <p>Anfangskapital: {{ anfangskapital.value }}</p>
+    <p>Sparrate: {{ sparrate.value }}</p>
+    <p>Sparintervall: {{ sparintervall.value }}</p>
+    <p>Zinssatz: {{ zinssatz.value }}</p>
+    <p>Ansparzeit: {{ ansparzeit.value }}</p>
+    <p>Ergebnis: {{ ergebnis }}</p>
+</main>
