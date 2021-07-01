@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.rechner__wrapper {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.rechner__container {
+    margin-bottom: 30px;
+    list-style: none;
+    line-height: 24px;
+}
+
+.rechner__title {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+@media (min-width: 1024px) {
+    .rechner__wrapper {
+        width: 60%;
+        margin: 40px auto;
+    }
+}
+
