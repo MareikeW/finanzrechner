@@ -1,10 +1,11 @@
 <header>
-  <h2>FinCalc</h2>
-  <nav>
-    <a routerLink="/">Startseite</a>
-    <a routerLink="/sparrechner">Sparen</a>
-    <a routerLink="/einmalige_anlage">Einmalige Anlage</a>
-    <a routerLink="/budgetplaner">Budget</a>
+  <h2 class="header__title">FinCalc</h2>
+  <h3 class="hamburger-menu" (click)="toggleMenu()">&#x2630;</h3>
+  <nav class="navbar" [ngStyle]="{'width':isMenuOpen ? '200px' : '0px'}">
+    <a routerLink="/" class="nav__link">Startseite</a>
+    <a routerLink="/sparrechner" class="nav__link">Sparen</a>
+    <a routerLink="/einmalige_anlage" class="nav__link">Einmalige Anlage</a>
+    <a routerLink="/budgetplaner" class="nav__link">Budget</a>
   </nav>
 </header>
 
