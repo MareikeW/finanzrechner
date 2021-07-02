@@ -25,12 +25,17 @@ export class BudgetComponent {
   einnahmen: number = 0;
   ausgaben: number = 0;
 
+  currentItem = 'Television';
+
+  constructor() {
+    
+  }
 
   berechneDifferenz() {
     this.einnahmen = this.einkommen.value;
     this.ausgaben = this.sparen.value + this.wohnen.value + this.energie.value + this.essen.value + this.transport.value + this.kleidung.value +
                     this.erholung.value + this.spenden.value  + this.schulden.value + this.sonstiges.value;
-    this.differenz = this.einnahmen - this.ausgaben; 
+    this.differenz = this.einnahmen - this.ausgaben;
   }
-
+  
 }
