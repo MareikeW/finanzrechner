@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ChartModule } from 'angular2-chartjs';
 
 import { BudgetComponent } from './budget.component';
 import { BudgetchartComponent } from './budgetchart/budgetchart.component';
@@ -13,7 +14,8 @@ import { BudgetchartComponent } from './budgetchart/budgetchart.component';
   ],
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ChartModule
   ],
   exports: [
     BudgetComponent
