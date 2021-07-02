@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-sparen',
@@ -7,6 +7,7 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./sparen.component.css']
 })
 export class SparenComponent {
+  
   // Forminputs
   anfangskapital = new FormControl(0);
   sparrate = new FormControl(0);

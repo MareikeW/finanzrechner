@@ -1,1 +1,33 @@
-<p>einmalig works!</p>
+<main>
+    <h1>Einmalige Anlage</h1>
+    <h2>Zinsrechner</h2>
+    <!--Reactive Form-->
+    <div class="rechner__container">
+        <!-- Form zum Werte eintragen -->
+        <form class="zinsen__form" autocomplete="off">
+        <label for="anfangskapital">Anfangskapital:</label>
+        <input type="number" id="anfangskapital" [formControl]="anfangskapital">
+
+        <label for="zinssatz">Zinssatz (% p.a.):</label>
+        <input type="number" id="zinssatz" [formControl]="zinssatz">
+
+        <label for="ansparzeit">Ansparzeit (Jahre):</label>
+        <input type="number" id="ansparzeit" [formControl]="ansparzeit">
+
+        <button 
+            id="zinsrechner-button" 
+            type="button" 
+            class="calc__button" 
+            (click)="berechneErgebnis()"
+        >Berechnen</button>
+        </form>
+
+        <div id="endkapital" class="ergebnis">{{ ergebnis | currency:'EUR' }}</div>
+
+    </div>
+
+    <p>Anfangskapital: {{ anfangskapital.value }}</p>
+    <p>Zinssatz: {{ zinssatz.value }}</p>
+    <p>Ansparzeit: {{ ansparzeit.value }}</p>
+    <p>Ergebnis: {{ ergebnis }}</p>
+</main>

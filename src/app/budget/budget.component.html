@@ -1,1 +1,64 @@
-<p>budget works!</p>
+<main>
+    <h1>Budgetplaner</h1>
+    <!--Reactive Form
+    einkommen = new FormControl(0);
+  sparen = new FormControl(0);
+  wohnen = new FormControl(0);
+  energie = new FormControl(0);
+  lebensmittel = new FormControl(0);
+  transport = new FormControl(0);
+  kleidung = new FormControl(0);
+  erholung = new FormControl(0);
+  schulden = new FormControl(0);
+  sonstiges = new FormControl(0);
+
+  ergebnis: number = 0;
+    -->
+    <div class="rechner__container">
+        <!-- Form zum Werte eintragen -->
+        <form id="budgetForm" class="budget__form" autocomplete="off">
+        <label for="einkommen">Einkommen:</label>
+        <input type="number" id="einkommen" [formControl]="einkommen">
+
+        <label for="sparen">Sparen:</label>
+        <input type="number" id="sparen" [formControl]="sparen">
+
+        <label for="wohnen">Wohnen:</label>
+        <input type="number" id="wohnen" [formControl]="wohnen">
+
+        <label for="energie">Energieversorgung:</label>
+        <input type="number" id="energie" [formControl]="energie">
+
+        <label for="essen">Essen:</label>
+        <input type="number" id="essen" [formControl]="essen">
+
+        <label for="transport">Transport:</label>
+        <input type="number" id="transport" [formControl]="transport">
+
+        <label for="kleidung">Kleidung:</label>
+        <input type="number" id="kleidung" [formControl]="kleidung">
+
+        <label for="erholung">Erholung:</label>
+        <input type="number" id="erholung" [formControl]="erholung">
+
+        <label for="spenden">Wohltätigkeit:</label>
+        <input type="number" id="spenden" [formControl]="spenden">
+
+        <label for="schulden">Schulden:</label>
+        <input type="number" id="schulden" [formControl]="schulden">
+
+        <label for="sonstiges">Sonstiges:</label>
+        <input type="number" id="sonstiges" [formControl]="sonstiges">
+
+        <button 
+            id="zinsrechner-button" 
+            type="button" 
+            class="calc__button" 
+            (click)="berechneDifferenz()"
+        >Berechnen Differenz</button>
+        </form>
+
+        <div class="ergebnis">{{ differenz | currency:'EUR' }}</div>
+
+    </div>
+</main>
