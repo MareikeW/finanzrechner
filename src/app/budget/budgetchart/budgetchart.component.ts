@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class BudgetchartComponent {
 
-  @Input() item = '';
+  @Input() sparen = 0;
+  @Input() wohnen = 0;
 
 }

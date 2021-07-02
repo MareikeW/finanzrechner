@@ -25,7 +25,8 @@ export class BudgetComponent {
   einnahmen: number = 0;
   ausgaben: number = 0;
 
-  currentItem = 'Television';
+  sparBetrag = 0;
+  wohnenBetrag = 0;
 
   constructor() {
     
@@ -36,6 +37,13 @@ export class BudgetComponent {
     this.ausgaben = this.sparen.value + this.wohnen.value + this.energie.value + this.essen.value + this.transport.value + this.kleidung.value +
                     this.erholung.value + this.spenden.value  + this.schulden.value + this.sonstiges.value;
     this.differenz = this.einnahmen - this.ausgaben;
+    this.createBudgetGraph();
+    return this.differenz;
+  }
+
+  createBudgetGraph() {
+    this.sparBetrag = this.sparen.value;
+    this.wohnenBetrag = this.wohnen.value;
   }
   
 }
